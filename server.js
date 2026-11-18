@@ -15,8 +15,8 @@ const PROVIDER = 'openai';
 
 // プロバイダごとに利用するモデル
 const MODELS = {
-    openai: 'gpt-5.5',        // OpenAI（デフォルト）
-    gemini: 'gemini-3.5-flash', // Google Gemini
+    openai: 'gpt-6-luna',        // OpenAI（デフォルト）
+    gemini: 'gemini-4-hydrogen', // Google Gemini
 };
 const MODEL = MODELS[PROVIDER];
 
