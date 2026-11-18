@@ -44,10 +44,10 @@ PORT=8080
 Edit the `PROVIDER` constant near the top of `server.js`:
 
 ```javascript
-// For OpenAI (default) -> gpt-5.5
+// For OpenAI (default) -> gpt-6-luna
 const PROVIDER = 'openai';
 
-// For Gemini -> gemini-3.5-flash
+// For Gemini -> gemini-4-hydrogen
 // const PROVIDER = 'gemini';
 ```
 
@@ -236,10 +236,10 @@ npm run dev
 ### Supported Models
 
 **OpenAI:**
-- `gpt-5.5` (default)
+- `gpt-6-luna` (default)
 
 **Gemini:**
-- `gemini-3.5-flash`
+- `gemini-4-hydrogen` (called with `thinkingLevel: "LOW"`; thinking tokens count toward `maxOutputTokens`)
 
 ## License
 

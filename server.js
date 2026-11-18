@@ -138,8 +138,11 @@ async function callGemini(prompt) {
                 parts: [{ text: prompt }]
             }],
             generationConfig: {
-                maxOutputTokens: 3000,
-                response_mime_type: "application/json"
+                // 思考型モデルでは思考トークンもこの上限に含まれるため、余裕を持たせる
+                maxOutputTokens: 8192,
+                response_mime_type: "application/json",
+                // クイズ生成に深い思考は不要。HIGH（既定）だと思考で上限に達し JSON が途中で切れることがある
+                thinkingConfig: { thinkingLevel: "LOW" }
             }
         })
     });
